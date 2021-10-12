@@ -1,5 +1,9 @@
 package racinggame;
 
 public enum EngineStatus {
-	START, STOP
+	START, STOP;
+
+	public boolean isStart() {
+		return this == START;
+	}
 }
