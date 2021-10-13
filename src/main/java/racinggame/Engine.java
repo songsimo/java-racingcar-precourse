@@ -15,10 +15,10 @@ public class Engine {
 		this.acceleration = acceleration;
 	}
 
-	public EngineStatus getStatus() {
+	public int getStep() {
 		if(acceleration >= ACCEL_GAUGE) {
-			return EngineStatus.START;
+			return EngineStatus.START.getStep();
 		}
-		return EngineStatus.STOP;
+		return EngineStatus.STOP.getStep();
 	}
 }

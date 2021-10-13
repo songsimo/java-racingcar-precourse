@@ -1,9 +1,16 @@
 package racinggame;
 
 public enum EngineStatus {
-	START, STOP;
+	START(1),
+	STOP(0);
 
-	public boolean isStart() {
-		return this == START;
+	final private int value;
+
+	EngineStatus(int value) {
+		this.value = value;
+	}
+
+	public int getStep() {
+		return value;
 	}
 }
