@@ -14,10 +14,12 @@ public class Car {
 		this.mileage = new Mileage(mileage);
 	}
 
-	public void drive(int value) {
+	public Car drive(int value) {
 		Engine engine = new Engine(value);
 
 		mileage = mileage.add(new Mileage(engine.getStep()));
+
+		return this;
 	}
 
 	public String getName() {
