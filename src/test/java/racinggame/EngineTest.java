@@ -5,6 +5,8 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import racinggame.domain.Engine;
+
 public class EngineTest {
 	@Test
 	@DisplayName("엔진 시동 1, 중지 0")

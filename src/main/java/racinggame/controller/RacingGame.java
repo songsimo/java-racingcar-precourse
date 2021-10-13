@@ -1,12 +1,11 @@
 package racinggame.controller;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
-import racinggame.Car;
-import racinggame.Cars;
-import racinggame.PlayResult;
+import racinggame.domain.Car;
+import racinggame.domain.Cars;
+import racinggame.domain.PlayResult;
 import racinggame.RandomNumber;
 import racinggame.utils.Validator;
 import racinggame.view.InputView;

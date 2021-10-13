@@ -1,4 +1,4 @@
-package racinggame;
+package racinggame.domain;
 
 public class Car {
 	private Name name;

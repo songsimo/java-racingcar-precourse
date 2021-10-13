@@ -2,8 +2,8 @@ package racinggame.view;
 
 import java.util.List;
 
-import racinggame.Car;
-import racinggame.PlayResult;
+import racinggame.domain.Car;
+import racinggame.domain.PlayResult;
 
 public class OutputView {
 	private static final String ONE_STEP = "-";

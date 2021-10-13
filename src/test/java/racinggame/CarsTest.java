@@ -6,6 +6,11 @@ import java.util.Arrays;
 
 import static org.assertj.core.api.Assertions.assertThatIllegalArgumentException;
 
+import racinggame.common.ValueError;
+import racinggame.domain.Car;
+import racinggame.domain.Cars;
+import racinggame.domain.PlayResult;
+
 public class CarsTest {
 	@Test
 	@DisplayName("자동차 주행 테스트")
@@ -21,7 +26,7 @@ public class CarsTest {
 		assertThatIllegalArgumentException()
 			.isThrownBy(() -> new Cars(Arrays.asList(new Car("java"), new Car("java"), new Car("pobi"))))
 			.isInstanceOf(IllegalArgumentException.class)
-			.withMessageContaining("자동차의 이름은 중복을 허용하지 않습니다.");
+			.withMessageContaining(ValueError.DUPLICATE_CAR_NAME.getMessage());
 	}
 
 	@Test

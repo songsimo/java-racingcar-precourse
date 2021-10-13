@@ -1,18 +1,19 @@
-package racinggame;
+package racinggame.domain;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import racinggame.common.Const;
+import racinggame.common.ValueError;
+
 public class Name {
-	public static final String NAME_REGX = "\\s";
-	public static final int MIN_NAME_LENGTH = 1;
-	public static final int MAX_NAME_LENGTH = 5;
+
 
 	private String name;
 
 	public Name(String name) {
 		if(!isValid(name)) {
-			throw new IllegalArgumentException("이름은 공백과 길이가 제한됩니다.[길이: 5이하]");
+			throw new IllegalArgumentException(ValueError.INVALID_NAME_VALUE.getMessage());
 		}
 		this.name = name;
 	}
@@ -22,7 +23,7 @@ public class Name {
 	}
 
 	private boolean isNotBlank(String name) {
-		Pattern pattern = Pattern.compile(NAME_REGX);
+		Pattern pattern = Pattern.compile(Const.NAME_REGX);
 		Matcher matcher = pattern.matcher(name);
 
 		return !matcher.find();
@@ -31,7 +32,7 @@ public class Name {
 	private boolean isValidLength(String name) {
 		int length = name.length();
 
-		return length >= MIN_NAME_LENGTH && length <= MAX_NAME_LENGTH;
+		return length >= Const.MIN_NAME_LENGTH && length <= Const.MAX_NAME_LENGTH;
 	}
 
 	public String getName() {

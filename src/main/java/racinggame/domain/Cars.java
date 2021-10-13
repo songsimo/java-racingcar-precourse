@@ -1,9 +1,11 @@
-package racinggame;
+package racinggame.domain;
 
-import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+
+import racinggame.NumberGenerator;
+import racinggame.common.ValueError;
 
 public class Cars {
 	private final List<Car> cars;
@@ -21,7 +23,7 @@ public class Cars {
 		}
 
 		if(carSet.size() != cars.size()) {
-			throw new IllegalArgumentException("자동차의 이름은 중복을 허용하지 않습니다.");
+			throw new IllegalArgumentException(ValueError.DUPLICATE_CAR_NAME.getMessage());
 		}
 	}
 
