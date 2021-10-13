@@ -33,4 +33,8 @@ public class Name {
 
 		return length >= MIN_NAME_LENGTH && length <= MAX_NAME_LENGTH;
 	}
+
+	public String getName() {
+		return name;
+	}
 }

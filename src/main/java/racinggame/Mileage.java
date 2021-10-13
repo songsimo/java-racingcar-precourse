@@ -7,10 +7,8 @@ public class Mileage {
 		this.mileage = mileage;
 	}
 
-	public void add(EngineStatus status) {
-		if(status.isStart()) {
-			mileage += 1;
-		}
+	public Mileage add(Mileage other) {
+		return new Mileage(this.mileage + other.mileage);
 	}
 
 	public int distance() {
