@@ -39,4 +39,8 @@ public class Name {
 			throw new IllegalArgumentException(Error.INVALID_NAME_LENGTH.getMessage());
 		}
 	}
+
+	public String getName() {
+		return name;
+	}
 }

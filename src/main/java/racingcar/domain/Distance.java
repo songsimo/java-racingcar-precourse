@@ -22,4 +22,12 @@ public class Distance {
 	public int getDistance() {
 		return distance;
 	}
+
+	public boolean isLongerThan(int compareDistance) {
+		return this.distance > compareDistance;
+	}
+
+	public boolean isEqual(int compareDistance) {
+		return distance == compareDistance;
+	}
 }
