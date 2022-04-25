@@ -1,6 +1,7 @@
 package racingcar.dto;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class GameResult {
@@ -26,5 +27,9 @@ public class GameResult {
 		}
 
 		return names;
+	}
+
+	public List<CarStatus> getCars() {
+		return Collections.unmodifiableList(cars);
 	}
 }
