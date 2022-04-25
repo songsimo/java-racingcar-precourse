@@ -9,8 +9,30 @@ import racingcar.dto.GameResult;
 public class Cars {
 	private List<Car> cars = new ArrayList<>();
 
+	public Cars(String[] names) {
+		for (String name: names) {
+			cars.add(new Car(name));
+		}
+	}
+
 	public Cars(List<Car> cars) {
 		this.cars.addAll(cars);
+	}
+
+	public void move(NumberStrategy	 strategy) {
+		for(Car car: cars) {
+			car.move(strategy.generate());
+		}
+	}
+
+	public GameResult getGameResult() {
+		GameResult gameResult = new GameResult();
+
+		for(Car car: cars) {
+			gameResult.add(CarStatus.of(car.getName(), car.getDistance()));
+		}
+
+		return gameResult;
 	}
 
 	public GameResult getWinners() {

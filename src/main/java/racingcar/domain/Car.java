@@ -14,6 +14,10 @@ public class Car {
 		distance = new Distance(position);
 	}
 
+	public void move(int number) {
+		distance.move(number);
+	}
+
 	public String getName() {
 		return name.getName();
 	}
